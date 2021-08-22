@@ -1,10 +1,24 @@
+# for i in range(len(A)):
+#        min_idx = i
+#     for j in range(i+1, len(A)):
+#         if A[min_idx] > A[j]:
+#             min_idx = j
+              
+#     # Swap the found minimum element with 
+#     # the first element        
+#     A[i], A[min_idx] = A[min_idx], A[i]
+
+
 def selection_sort(arr):
     print("yep ")
-    mini=arr[0]
-    for i in range(len(arr)-1):
-        for j in range(len(arr)-1-i):
-            if mini < arr[j]:
-                arr[j],mini=mini,arr[j]
+   
+    for i in range(len(arr)):
+        mini=i
+        for j in range(i+1,len(arr)):
+            if arr[mini] >arr[j]:
+                mini=j
+                # arr[j],mini=mini,arr[j]
+        arr[i],arr[mini]=arr[mini],arr[i]        
     return arr            
             
 
