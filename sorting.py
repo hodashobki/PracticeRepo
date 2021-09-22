@@ -1,29 +1,29 @@
 # bubleSort:
-# def bubble_Sort(arr):
-#     for i in range(len(arr)-1):
-#         for j in range(len(arr)-1-i):
-#             if arr[j]>arr[j+1]:
-#                 arr[j],arr[j+1]=arr[j+1],arr[j]
-#     return arr            
+def bubble_Sort(arr):
+    for i in range(len(arr)-1):
+        for j in range(len(arr)-1-i):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+    return arr            
   
    
 
-# print(bubble_Sort([1,5,3,2,0,8]))
+print(bubble_Sort([1,5,3,2,0,8]))
 # *****************************************************
 # Selection Sort
-# def selection_sort(arr):
-#     print("yep ")
+def selection_sort(arr):
+    print("yep ")
    
-#     for i in range(len(arr)):
-#         mini=i
-#         for j in range(i+1,len(arr)):
-#             if arr[mini] >arr[j]:
-#                 mini=j
+    for i in range(len(arr)):
+        mini=i
+        for j in range(i+1,len(arr)):
+            if arr[mini] >arr[j]:
+                mini=j
                
-#         arr[i],arr[mini]=arr[mini],arr[i]        
-#     return arr            
+        arr[i],arr[mini]=arr[mini],arr[i]        
+    return arr            
 
-# print(selection_sort([1,5,3,2,0,8]))
+print(selection_sort([1,5,3,2,0,8]))
 # *********************************************************************************
 # Insertion Sort
 # Function to do insertion sort
