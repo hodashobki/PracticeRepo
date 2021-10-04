@@ -33,3 +33,33 @@ for(let j=0;j<testArr.length;j++){
     testArr[j]=testArr[j]*j;
 }
 console.log(testArr);
+
+
+// 5-Get 1 to 255 - Write a function that returns an array
+//  with all the numbers from 1 to 255.
+function Array_ofNumbers(){
+    newArray=[]
+    for(let i=1;i<=255;i++){
+        newArray.push(i);
+    }
+    return newArray;
+}
+result=Array_ofNumbers();
+console.log(result);
+
+// Get even 1000 - Write a function
+//  that would get the sum of all the even numbers from 
+//  1 to 1000.  You may use a modulus
+//  operator for this exercise.
+function sum_evenNumbers(){
+let sum=0;
+for(let j=1;j<=1000;j++){
+    if(j % 2 ==0){
+        sum +=j;
+    }
+}
+return sum;
+
+}
+result=sum_evenNumbers();
+console.log(result);
