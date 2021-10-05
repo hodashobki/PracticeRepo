@@ -362,8 +362,16 @@ console.log(Increment([1,2,3,4,5,6]));
 // For example, previousLengths(["hello", "dojo", "awesome"]) 
 // should return ["hello", 5, 4].
 // Hint: Can for loops only go forward?
+function previousLengths(arr){
+    for (var i = arr.length-1; i > 0; i--){
+        arr[i] = arr[i-1].length;
+    }
+    return arr;
+}
+// or this:
+
 function previous(arr){
-    for(let i=0; i<arr.length; i++){
+    for(let i=0; i<arr.length-1; i++){
         arr[i+1]=arr[i].length;
 
     }
@@ -389,6 +397,15 @@ console.log(add_seven([1,2,3]));
 // ple: reverse([3,1,6,4,2]) returns the same array, but now contains values reversed like
 // .. [2,4,6,1,3].  Do this without creating an empty temporary array.
 // (Hint: you'll need to swap values).
+function reverse(arr){
+    for (var i = 0; i < arr.length/2; i++){
+        var temp = arr[i];
+        arr[i] = arr[arr.length-1-i];
+        arr[arr.length-1-i] = temp;
+    }
+    return arr;
+}
+// not This
 function reverse_array(arr){
     let i=0
     while(i<arr.length/2){
@@ -443,7 +460,16 @@ console.log(always_hungry(["mm","kk","hh"]));
 //  the array into [6,2,4,3,5,1].
 // No need to return the array this time.
 function swapTowardCenter(arr){
-    for(let i=0; i<arr.length; i++){
+    for (var i = 0; i < arr.length/2; i+=2){
+        var temp = arr[i];
+        arr[i] = arr[arr.length-1-i];
+        arr[arr.length-1-i] = temp;
+    }
+    return arr;
+}
+// or this
+function swapTowardCenter(arr){
+    for(let i=0; i<arr.length/2; i++){
         let temp=arr[i];
         arr[i]=arr[(arr.length-1)-i];
         arr[(arr.length-1)-i]=temp;
