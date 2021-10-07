@@ -416,7 +416,7 @@ function reverse_array(arr){
     }
     return arr;
 }
-console.log(reverse_array(3,1,6,4,2));
+console.log(reverse_array([3,1,6,4,2]));
 
 // 11-Outlook: Negative - Given an array, create and return a new one containing all
 //  the values of the original array, but make them all negative
@@ -489,3 +489,22 @@ function scale_array(num,arr){
     return arr;
 }
 console.log(scale_array(7,[1,2,3]));
+
+// iterating through objects/dictionery
+var users = [
+    {
+        name: "Michael",
+        age: 37
+    },
+    {
+        name: "John",
+        age: 30
+    },
+    {
+        name: "David",
+        age: 27
+    }
+];
+for(let i in users){
+    console.log(users[i].name +" "+users[i].age);
+}
