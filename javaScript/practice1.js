@@ -405,13 +405,13 @@ function reverse(arr){
     }
     return arr;
 }
-// not This
+// or This
 function reverse_array(arr){
     let i=0
     while(i<arr.length/2){
         let temp =arr[i];
-        arr[i]=arr[arr.length-1];
-        arr[arr.length-1]=temp;
+        arr[i]=arr[arr.length-1-i];
+        arr[arr.length-1-i]=temp;
         i++
     }
     return arr;
@@ -466,7 +466,7 @@ function swapTowardCenter(arr){
         arr[arr.length-1-i] = temp;
     }
     return arr;
-}
+}// the result=[6,2,4,3,5,1]
 // or this
 function swapTowardCenter(arr){
     for(let i=0; i<arr.length/2; i++){
@@ -476,7 +476,7 @@ function swapTowardCenter(arr){
     }
     return arr;
 }
-console.log(swapTowardCenter([1,2,3,4,5,6]));
+console.log(swapTowardCenter([1,2,3,4,5,6]));//the result=[6, 5, 4, 3, 2, 1]
 
 // 14-Scale the Array - Given an array arr and a number num, multiply all values in the
 //  array arr by the number num, and return the changed array arr.  For example, 
