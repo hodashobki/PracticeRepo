@@ -1,6 +1,9 @@
+body{
+    background-color: black;
+}
 div.row div{
-    width: 20px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
     border: 1px solid black;
     display: inline-block;
 }
@@ -11,6 +14,16 @@ div.coin{
     background: url("./coin.png.png");
     background-repeat: no-repeat;
     background-position: center;
-    width: 15px;
-    height: 15px;
+    background-size: cover;
+  
+}
+div.pacman{
+    background: url("./pacman.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+div.empty{
+    
 }
