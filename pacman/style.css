@@ -1,14 +1,16 @@
 body{
     background-color: black;
+    margin: 0px;
 }
 div.row div{
-    width: 45px;
-    height: 45px;
+    width: 20px;
+    height: 20px;
     border: 1px solid black;
     display: inline-block;
 }
 div.brick{
     background-color: blue;
+    
 }
 div.coin{
     background: url("./coin.png.png");
@@ -17,13 +19,20 @@ div.coin{
     background-size: cover;
   
 }
-div.pacman{
+div#pacman{
     background: url("./pacman.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+div#score{
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
 }
 div.empty{
-    
+
 }

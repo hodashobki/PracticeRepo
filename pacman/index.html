@@ -9,41 +9,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-   <div id='world'></div>
+    <div id="container">
+        <div id='world'></div>
+        <div id="pacman"></div>
+        <div id="score"></div>
+    </div>
     <script>
         var world=[
             [2,2,2,2,2,2,2,2,2,2],
             [2,1,1,1,1,1,1,1,1,2],
             [2,1,1,1,1,1,1,1,1,2],
             [2,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,2,1,1,1,1,2],
+            [2,1,1,1,1,2,1,1,1,2],
             [2,1,1,1,1,1,1,1,1,2],
-            [2,1,1,1,1,1,1,1,1,2],
-            [2,1,1,1,1,1,1,1,1,2],
-            [2,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,0,1,1,2],
             [2,1,1,1,1,1,1,1,1,2],
             [2,2,2,2,2,2,2,2,2,2]
         ];
+
+        var pacman={
+            x:0,
+            y:0
+        };
         function displayworld(){
             var output = "";
             for(var i = 0;i < world.length; i++){
-                output +="\n<div class='row'>";
+                output +="\n<div class='row'>\n";
                 for(var j=0; j <world[i].length;j++){
                     if(world[i][j]==2)
-                        output +="\n\t<div class='brick'></div>";
+                        output +="<div class='brick'></div>";
                     
                    else if(world[i][j]==1)
-                        output +="\n\t<div class='coin'></div>";
+                        output +="<div class='coin'></div>";
                     
                    if(world[i][j]==0)
-                        output +="\n\t<div class='empty'></div>";
+                        output +="<div class='empty'></div>";
                 }
                 output += "\n</div>"
             }
-            console.log(output);
+            // console.log(output);
             document.getElementById('world').innerHTML=output;
         }
+        function displaypacman(){
+            document.getElementById("pacman").style.top = pacman.y + "px";
+            document.getElementById("pacman").style.left = pacman.x +"px";
+        }
+       
         displayworld();
+        displaypacman();
+       
+
+        document.onkeydown=function(e){
+            if(e.keyCode==37){
+                pacman.x --;;
+            }
+            else if(e.keyCode==39){
+               pacman.x ++;;
+            }
+            if(e.keyCode==38){
+              pacman.y --; 
+            }
+            if(e.keyCode==40){
+                pacman.y ++;
+            }
+            if(world[pacman.y][pacman.x]==1){
+                world[pacman.y][pacman.x]=0;
+                displayworld();
+            }
+            
+            displaypacman();
+        }
     </script>
 </body>
 </html>
