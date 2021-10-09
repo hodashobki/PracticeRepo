@@ -12,7 +12,7 @@
     <div id="container">
         <div id='world'></div>
         <div id="pacman"></div>
-        <div id="score"></div>
+        <div id="score">0</div>
     </div>
     <script>
         var world=[
@@ -27,7 +27,7 @@
             [2,1,1,1,1,1,1,1,1,2],
             [2,2,2,2,2,2,2,2,2,2]
         ];
-
+        var score=0;
         var pacman={
             x:0,
             y:0
@@ -55,10 +55,14 @@
             document.getElementById("pacman").style.top = pacman.y + "px";
             document.getElementById("pacman").style.left = pacman.x +"px";
         }
-       
+       function displayScore(){
+           document.getElementById("score").innerHTML=score;
+       }
         displayworld();
         displaypacman();
-       
+        
+       displayScore();
+
 
         document.onkeydown=function(e){
             if(e.keyCode==37){
@@ -73,10 +77,12 @@
             if(e.keyCode==40){
                 pacman.y ++;
             }
-            if(world[pacman.y][pacman.x]==1){
-                world[pacman.y][pacman.x]=0;
-                displayworld();
-            }
+            // if(world[pacman.y][pacman.x]==1){
+            //     world[pacman.y][pacman.x]=0;
+            //     score +=10;
+            //     displayworld();
+            //     displayScore();
+            // }
             
             displaypacman();
         }
