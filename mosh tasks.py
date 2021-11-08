@@ -1,3 +1,5 @@
+
+# 1-giving commands in a game: .....
 command=""
 is_started=False
 while True:
@@ -28,3 +30,11 @@ while True:
         type quit to quit 
         type help for help
         """)
+
+        # 2- using nested loop to draw F : ...
+        numbers=[5,2,5,2,2]
+for x_count in numbers:
+    output=""
+    for number in range(x_count):
+        output +="x"
+    print(output)
