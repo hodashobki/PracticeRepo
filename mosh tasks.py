@@ -48,6 +48,8 @@ for item in items:
 print(uniqes)
 
 # converting numbers to words
+#we use get insted of [char] because it will through an error if the "char" didn't exist 
+# and with get we can put a defult value if the "char"was not found
 phon_number=input("Enter your Phon Number: ")
 number_mapping={
     "0":"zero",
@@ -63,5 +65,18 @@ number_mapping={
 }
 output=""
 for char in phon_number:
-    output += number_mapping.get(char,"!")+ " "
+    output += number_mapping.get(char,"!")+ " " 
 print(output)
+
+
+# adding emojes to messages............
+message=input("> ")
+words=message.split(" ")
+emojies={
+     ":)":"😊",
+     ":(":"😒"
+ }
+output=""
+for word in words:
+    output += emojies.get(word,word)+ " "
+print(output)    
