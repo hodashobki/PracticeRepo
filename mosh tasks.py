@@ -38,3 +38,11 @@ for x_count in numbers:
     for number in range(x_count):
         output +="x"
     print(output)
+     
+    #  print items that is not duplicated
+    items=[1,2,3,4,5,6,4,5]
+uniqes=[]
+for item in items:
+    if item not in uniqes:
+        uniqes.append(item)
+print(uniqes)
