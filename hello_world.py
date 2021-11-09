@@ -1,10 +1,5 @@
-message=input("> ")
-words=message.split(" ")
-emojies={
-     ":)":"😊",
-     ":(":"😒"
- }
-output=""
-for word in words:
-    output += emojies.get(word,word)+ " "
-print(output)    
+try:
+    age = int(input("enter your Age :"))
+    print(age)
+except ValueError:
+    print("Invalide Value")
