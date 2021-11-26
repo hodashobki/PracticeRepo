@@ -88,3 +88,17 @@ try:
     print(age)
 except ValueError:
     print("Invalide Value")
+
+
+
+# from string to list
+def str_to_list( str ) :
+	output=[]
+	for i in str:
+		if i ==" ":
+			continue
+		else:
+			output.append(i)
+	#Insert your code here
+	return output
+print(str_to_list("my string"))	
