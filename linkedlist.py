@@ -28,6 +28,27 @@ class LinkedList:
             runner.next=new_node
 
 
+    def remove_from_front(self):
+        if self.head != None:
+            self.head = self.head.next
+
+
+    def remove_from_end(self):
+        if self.head ==None:
+           return self
+        elif self.head.next ==None:
+            self.head =None
+        else :
+            current =self.head
+            while current.next.next !=None:
+                current =current.next
+            current.next =None
+      
+        
+
+
+
+
 
     def printList(self):
         if self.head is None:
@@ -45,4 +66,6 @@ llist.addNode(2)
 llist.addNode(3)
 llist.addNode(4)
 llist.addToTheEnd(55)
+llist.remove_from_front()
+llist.remove_from_end()
 llist.printList()
